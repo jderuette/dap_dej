@@ -3,17 +3,15 @@ package fr.hoc.dap.server;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.mortbay.log.Log;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author djer1
  *
  */
+@SpringBootApplication
 public class Start {
-    
-    private static final Logger LOG = LogManager.getLogger();
     
 
     /**
@@ -22,17 +20,7 @@ public class Start {
      * @throws IOException 
      */
     public static void main(String[] args) throws IOException, GeneralSecurityException {
-
-        LOG.info("Salut le monde");
-
-        LOG.error("Ceci est une erreur");
-
-        LOG.debug("Ceci est un bug ?");
-
-        System.out.println("Hello world 2");
-        //System.out.println();      
-
-        GmailQuickstart.main();
+        SpringApplication.run(Start.class, args);
     }
 
 }
