@@ -52,6 +52,8 @@ public class Hello2Controller {
         Map<String, StoredCredential> usersMap = new HashMap<>();
         Set<String> allKeys = users.keySet();
         
+        //Modif
+        
         for(String aKey : allKeys) {
             StoredCredential value = users.get(aKey);
             usersMap.put(aKey, value);
