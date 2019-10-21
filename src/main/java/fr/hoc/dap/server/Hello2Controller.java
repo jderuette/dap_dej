@@ -25,6 +25,42 @@ import com.google.api.client.util.store.DataStore;
 @Controller
 public class Hello2Controller {
     
+    @RequestMapping("/hello3")
+    public String hello3(final ModelMap model) {
+        String userName = "toto";
+        
+        model.addAttribute("uName", userName);
+        
+        List<String> betes = new ArrayList<String>();
+        
+        betes.add("Autruche");
+        betes.add("Zèbre");
+        betes.add("Chat très méchant");
+        
+        model.addAttribute("betes", betes);
+        
+        return "hello2";
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     GoogleService gService = new GoogleService();
     
     @RequestMapping("/hello2")
